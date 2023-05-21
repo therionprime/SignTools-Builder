@@ -41,4 +41,4 @@ jobs:
         with:
           semantic_version: 17.4
         env:
-          GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
