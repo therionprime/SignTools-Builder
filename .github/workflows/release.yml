@@ -27,7 +27,7 @@ jobs:
 
       - name: Binaries Release
         uses: goreleaser/goreleaser-action@v3.1.0
-        with:
+f        with:
           version: ~> 0.175
           args: release --rm-dist
         env:
