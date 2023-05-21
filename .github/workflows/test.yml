@@ -15,13 +15,13 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: actions/checkout@v3.5.2
         with:
-          token: ${{ secrets.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 }}
+          token: ${{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 }}
 
       - name: Checkout without token
         if: github.event_name == 'pull_request'
         uses: actions/checkout@v3.5.2      
         with:
-          token: ${{ secrets.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 }}
+          token: ${{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 }}
       - name: Fetch Go version
         run: |
           GO_VERSION=$(perl -ne 'print "$1\n" if /FROM golang:([0-9.]+)/' Dockerfile | head -n1)
@@ -42,4 +42,4 @@ jobs:
         with:
           semantic_version: 17.4
         env:
-          GITHUB_TOKEN: ${{ secrets.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}}
+          GITHUB_TOKEN: ${{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}}
